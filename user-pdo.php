@@ -107,11 +107,6 @@
                 $updt = "UPDATE utilisateurs SET login = :login, password = :password, email = :email, firstname = :firstname, lastname = :lastname WHERE login = :loginn";
                 $rupdt = $this->bdd->prepare($updt);
                 $rupdt->execute($data);
-                $this->login = $login;
-                $this->password = $password;
-                $this->email = $email;
-                $this->firstname = $fname;
-                $this->lastname = $lname;
                 return "Mis a jour avec succès";
             }
         }
@@ -158,9 +153,9 @@
     $user = new UserPDO();
 
     //echo $user->register("paulo", "x", "x", "paulo", "pastis");
-    echo $user->connect("paulo", "x");
+    echo $user->connect("paulo", "pastis");
     //echo $user->delete();
-    //echo $user->update("paulo", "pastis", "pp@gmail.com", "paulo","inho");
+    //echo $user->update("", "", "", "","");
     //echo $user->isConnected();
     //echo $user->getAllInfos();
     //echo $user->getLogin();
